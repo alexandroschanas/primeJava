@@ -2,51 +2,31 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int start = 1;
-        int end = 6;
-        int primeNumbersFound = 0;
 
-        for(int i = start; i<=end; i++){
 
-                if(isPrime(i)){
+    System.out.println(numbers());
 
-                System.out.println("Is " + i + " a prime? => " + isPrime(i));
 
-                primeNumbersFound++;
+    }
 
-                if(primeNumbersFound == 3){
-                    break;
-                }
+    public static boolean numbers(){
 
-                }
+        int numbersFound = 0;
+
+        for(int i=0; numbersFound<5 && i<1000; i++){
+
+            if(i % 3 == 0 && i % 5 == 0){
+
+                System.out.println("Number => " + i);
+                numbersFound++;
+            }
 
         }
 
-    System.out.println("Total prime numbers found between " + start + " to " +  end  + " are => " + primeNumbersFound );
+        System.out.println("The sum of numbers is => " +numbersFound);
+
+        return true;
 
     }
 
-
-
-
-    public static boolean isPrime(int prime){
-    int primeNumbersFound = 0;
-
-    if(prime < 2){
-        return false;
-    }
-
-    for(int divisor =2; divisor < prime; divisor++){
-
-        if(prime % divisor == 0){
-            return false;
-        }
-
-
-    }
-
-    primeNumbersFound++;
-    return true;
-
-    }
 }
